@@ -4,7 +4,7 @@ import jakarta.persistence.Id
 import org.springframework.stereotype.Service
 
 @Service
-class SenseiService(val repository: SenseiRepository) {
+class SenseiService(val repository: SenseiRepository, val configure: ConfigProperties) {
 
     fun makeSensei() {
         val sensei = Sensei(ArrayList<Student>())
@@ -27,5 +27,9 @@ class SenseiService(val repository: SenseiRepository) {
 
     fun load(senseiId: Long) {
         repository.findById(senseiId)
+    }
+
+    fun getPort(): Int {
+        return configure.port
     }
 }

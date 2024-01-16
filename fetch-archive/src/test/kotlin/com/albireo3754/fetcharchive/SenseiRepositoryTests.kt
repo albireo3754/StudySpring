@@ -14,7 +14,6 @@ import java.lang.annotation.RetentionPolicy
 
 //@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DataJpaTest
-
 class SenseiRepositoryTest @Autowired constructor(
     val entityManager: TestEntityManager,
     val senseiRepository: SenseiRepository,

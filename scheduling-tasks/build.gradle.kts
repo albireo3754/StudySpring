@@ -5,7 +5,10 @@ plugins {
 }
 
 group = "com.albireo3754"
-version = "0.0.1-SNAPSHOT"
+version = "0.5.1-SNAPSHOT"
+artifacts {
+	archives(Jar::class)
+}
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17

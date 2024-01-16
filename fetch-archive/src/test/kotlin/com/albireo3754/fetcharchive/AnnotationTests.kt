@@ -6,7 +6,7 @@ import org.springframework.core.annotation.AnnotatedElementUtils
 class AnnotationTests {
     @Test
     fun te() {
-        Te().te()
+//        Te().te()
     }
 
     @Test

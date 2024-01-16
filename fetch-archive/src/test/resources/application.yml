@@ -1,4 +1,4 @@
-debug: true
+#debug: true
 spring:
   datasource:
     initialization-mode: always
@@ -14,3 +14,9 @@ spring:
         format_sql: true
 logging.level:
   org.hibernate.SQL: DEBUG
+student:
+  name: aru
+  age: 18
+mail:
+  port: 3
+  hostName: notHost

@@ -15,19 +15,18 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class SenseiServiceTest @Autowired constructor(
-     val senseiRepository: SenseiRepository) {
+     val senseiRepository: SenseiRepository, val configure: ConfigProperties) {
 
 //    @MockK
 //    lateinit var senseiRepository: SenseiRepository
 
     @Test
     fun getAru() {
-        val senseiService = SenseiService(senseiRepository)
+        val senseiService = SenseiService(senseiRepository, configure = configure)
     }
 
     @Test
     fun getTest() {
-
         val list = listOf(1, 2, 3)
     }
 }

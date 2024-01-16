@@ -59,4 +59,9 @@ class FileUploadControllerTest {
 
         this.mvc.perform(get("/files/test.txt")).andExpect(status().isNotFound());
     }
+
+    @Test
+    public void boxInt() throws Exception {
+        assert(Integer.valueOf(10002323) == Integer.valueOf(10002323));
+    }
 }
